@@ -6,12 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { SignupForm } from "@/features/auth/components/signout-form";
+import { SignupForm } from "@/features/auth/components/signup-form";
 import Link from "next/link";
 
 export default async function LoginPage() {
   return (
-    <div className="container pt-12">
+    <div className="container pb-4 pt-12">
       <div className="flex items-center justify-center">
         <Card className="w-full border-0 shadow-none sm:max-w-[380px] sm:border sm:shadow-sm">
           <CardHeader>

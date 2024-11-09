@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { ThemeToggler } from "@/components/theme-toggler";
+import { ThemeToggler } from "@/components/providers/theme-toggler";
 import { DashboardButton } from "@/components/dashboard-button";
+import { SignedIn } from "./signed-in";
 
 export const Header = () => {
   return (
@@ -19,6 +20,14 @@ export const Header = () => {
                 <Link href="/">Home</Link>
               </Button>
             </li>
+
+            <SignedIn>
+              <li>
+                <Button size="sm" variant="secondary" asChild>
+                  <Link href="/posts">Posts</Link>
+                </Button>
+              </li>
+            </SignedIn>
 
             <li>
               <DashboardButton />

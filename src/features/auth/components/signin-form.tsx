@@ -14,7 +14,7 @@ export const SigninForm = () => {
   );
 
   if (state.success) {
-    window.location.href = "/";
+    window.location.href = "/dashboard";
   }
 
   return (

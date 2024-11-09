@@ -8,26 +8,36 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "dependencies": {
     "@auth/prisma-adapter": "^2.7.3",
     "@node-rs/argon2": "^2.0.0",
     "@prisma/client": "^5.22.0",
     "@radix-ui/react-avatar": "^1.1.1",
+    "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-visually-hidden": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.456.0",
     "next": "15.0.3",
     "next-auth": "5.0.0-beta.25",
     "next-themes": "^0.4.3",
+    "nuqs": "^2.1.1",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react-use": "^17.5.1",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
-    "valibot": "1.0.0-beta.3"
+    "ts-node": "^10.9.2",
+    "valibot": "1.0.0-beta.3",
+    "vaul": "^1.1.1"
   },
   "devDependencies": {
+    "@faker-js/faker": "^9.2.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

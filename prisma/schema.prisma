@@ -7,6 +7,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Post {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  title   String
+  content String
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String @map("user_id")
+
+  @@map("posts")
+}
+
 model User {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now()) @map("created_at")
@@ -20,6 +34,7 @@ model User {
 
   accounts Account[]
   sessions Session[]
+  posts    Post[]
 
   @@map("users")
 }

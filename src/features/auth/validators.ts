@@ -4,7 +4,8 @@ const EmailSchema = v.pipe(
   v.string("Your email must be a string."),
   v.nonEmpty("Please enter your email."),
   v.email("Your email address is badly formatted."),
-  v.transform((input) => input.trim().toLowerCase()),
+  v.trim(),
+  v.toLowerCase(),
 );
 
 const PasswordSchema = v.pipe(
