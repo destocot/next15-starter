@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { SigninForm } from "@/features/auth/components/signin-form";
+import { SignupForm } from "@/features/auth/components/signout-form";
 import Link from "next/link";
 
 export default async function LoginPage() {
@@ -15,18 +15,18 @@ export default async function LoginPage() {
       <div className="flex items-center justify-center">
         <Card className="w-full border-0 shadow-none sm:max-w-[380px] sm:border sm:shadow-sm">
           <CardHeader>
-            <CardTitle className="text-3xl font-bold">Sign In</CardTitle>
+            <CardTitle className="text-3xl font-bold">Sign Up</CardTitle>
           </CardHeader>
           <CardContent>
-            <SigninForm />
+            <SignupForm />
           </CardContent>
           <CardFooter>
             <div className="text-sm">
-              Don&apos;t have an account? Click{" "}
+              Already have an account? Click{" "}
               <Button size="sm" variant="link" className="px-0" asChild>
-                <Link href="/register">here</Link>
+                <Link href="/login">here</Link>
               </Button>{" "}
-              to sign up.
+              to sign in.
             </div>
           </CardFooter>
         </Card>
