@@ -5,13 +5,13 @@ import { ThemeToggler } from "@/components/theme-toggler";
 
 export const Header = () => {
   return (
-    <header className="border-border/50 h-16 border-b">
+    <header className="h-16 border-b border-border/50">
       <div className="container flex h-full items-center justify-between">
         <Link href="/" className="text-2xl font-bold">
           NextStarter
         </Link>
 
-        <nav>
+        <nav className="flex items-center gap-x-4">
           <ul className="flex items-center gap-x-4">
             <li>
               <Button size="sm" asChild>
@@ -19,14 +19,13 @@ export const Header = () => {
               </Button>
             </li>
             <li>
-              <Button size="sm" asChild>
-                <Link href="/login">Login</Link>
+              <Button size="sm" variant="outline" asChild>
+                <Link href="/login">Log In</Link>
               </Button>
             </li>
-            <li>
-              <ThemeToggler />
-            </li>
           </ul>
+
+          <ThemeToggler />
         </nav>
       </div>
     </header>
