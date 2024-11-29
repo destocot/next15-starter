@@ -19,8 +19,8 @@ export const Header = () => {
             </li>
 
             <li>
-              <NavLink href='/about' variant='ghost' size='sm'>
-                About
+              <NavLink href='/profile' variant='ghost' size='sm'>
+                Profile
               </NavLink>
             </li>
 
