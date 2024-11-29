@@ -4,15 +4,20 @@ import './globals.css'
 
 import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
+import env from '@/env/client'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(env.NEXT_PUBLIC_BASE_URL),
   title: {
     template: '%s | Next Starter',
     default: 'Next Starter',
   },
   description: 'Next.js starter with shadcn/ui',
+  openGraph: {
+    images: ['opengraph-image.webp'],
+  },
 }
 
 export default function RootLayout({
