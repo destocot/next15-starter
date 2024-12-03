@@ -1,13 +1,14 @@
 import { ArrowRightIcon } from 'lucide-react'
 import Link from 'next/link'
 
+import { Container } from '@/components/container'
 import { Main } from '@/components/main'
 import { Button } from '@/components/ui/button'
 
 export default function Page() {
   return (
     <Main className='flex items-center justify-center'>
-      <div className='flex flex-col items-center gap-y-8 pb-8'>
+      <Container className='flex flex-col items-center gap-y-8 pb-8'>
         <h1 className='text-3xl font-bold'>NextStarter</h1>
 
         <p className='max-w-prose text-center text-muted-foreground'>
@@ -23,7 +24,7 @@ export default function Page() {
             <ArrowRightIcon />
           </Link>
         </Button>
-      </div>
+      </Container>
     </Main>
   )
 }

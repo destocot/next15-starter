@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { NavLink } from '@/components/nav-link'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export const Header = () => {
   return (
@@ -11,7 +11,7 @@ export const Header = () => {
         </Link>
 
         <nav className='flex flex-1 justify-end'>
-          <ul className='flex gap-x-2'>
+          <ul className='flex gap-x-4'>
             <li>
               <NavLink href='/' variant='ghost' size='sm'>
                 Home
